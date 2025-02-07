@@ -11,22 +11,33 @@
     <link rel="stylesheet" href="style.css">
     <title>Ivette Martinez Dorantes</title>
     <style>
-        .image-link {
-            margin: 10px; /* Espacio alrededor de cada imagen */
+       .info-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
         }
-        .row {
-            display: flex; /* imágenes una al lado de la otra */
-            justify-content: center; 
-            flex-wrap: wrap; 
-        }
-        .container {
-            max-width: 100%; 
-            text-align: center; /* Centramos  */
-        }
-        .image-link img {
-            width: 210px; /* Hacemos los GIFs más grandes */
+        .info-section img {
+            width: 200px;
             height: auto;
+            margin-right: 20px;
         }
+        .info-section:first-child img {
+            width: 250px; /* Tamaño más grande para la primera imagen */
+        }
+        .divider {
+            border-bottom: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        body {
+            font-size: 1.75em; /* Tamaño de fuente mediano */
+        }
+
         .navbar-nav .nav-item .dropdown-menu .dropdown-item {
             color: black; /* Color negro para los textos de las prácticas */
         }
@@ -80,23 +91,33 @@
         <p>Ivette Martinez Dorantes</p>
         <p class="lead"></p>
     </div>
-    <div class="container">
-        <div class="row">
-            <a href="https://youtu.be/T8TtE-enslA?si=BKOrdezrHB6oulWw" class="image-link">
-                <img src="./imagenes/uno.gif" alt="GIF 1">
-            </a>
-            <a href="https://youtu.be/taHo7t_jk3A?si=2wL-YnMxWQpJZQe_" class="image-link">
-                <img src="./imagenes/tres.gif" alt="GIF 2">
-            </a>
-            <a href="https://youtu.be/5NjJLFI_oYs?si=ivKAaKMrA4ZmufNR" class="image-link">
-                <img src="./imagenes/cinco.gif" alt="GIF 3">
-            </a>
-            <a href="https://youtu.be/ALbxIboSbMU?si=GsSnWind7A4QVSVl" class="image-link">
-                <img src="./imagenes/dos.gif" alt="GIF 4">
-            </a>
-            <a href="https://youtu.be/Q49pnA4jsp8?si=DpI3VCHa9OqHAd4Q" class="image-link">
-                <img src="./imagenes/cuatro.gif" alt="GIF 5">
-            </a>
+    <header>
+        <img src="./imagenes/H5.jpg" alt="Imagen del header" style="width: 50%; height: auto;">
+    </header>
+    <div class="container text-center" >
+        <h2>Duraznos en la cultura Pop</h2>
+        
+        <div class="info-section">
+            <img src="./imagenes/cb.jpg" alt="Durazno Amarillo">
+            <p><strong>Call Me by Your Name:</strong> En la película, los duraznos tienen un simbolismo especial en una famosa escena.</p>
+        </div>
+        <div class="divider"></div>
+        
+        <div class="info-section">
+            <img src="./imagenes/ft.png" alt="Durazno Blanco">
+            <p><strong>Peach Emoji:</strong>Usado ampliamente en redes sociales, el emoji de durazno a menudo simboliza una parte del cuerpo.</p>
+        </div>
+        <div class="divider"></div>
+        
+        <div class="info-section">
+            <img src="./imagenes/pc.jpg" alt="Durazno Paraguayo">
+            <p><strong>Mario Kart:</strong>La Princesa Peach es un personaje icónico de la franquicia de videojuegos Mario.</p>
+        </div>
+        <div class="divider"></div>
+        
+        <div class="info-section">
+            <img src="./imagenes/j.webp" alt="Durazno Nectarina">
+            <p><strong>James y el Melocotón Gigante:</strong>Un libro infantil popular escrito por Roald Dahl,<br> donde un durazno gigante es protagonista.</p>
         </div>
     </div>
 </body>

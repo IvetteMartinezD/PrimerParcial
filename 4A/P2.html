@@ -11,28 +11,40 @@
     <link rel="stylesheet" href="style.css">
     <title>Ivette Martinez Dorantes</title>
     <style>
-        .image-link {
-            margin: 10px; /* Espacio alrededor de cada imagen */
+        .info-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
         }
-        .row {
-            display: flex; /* imágenes una al lado de la otra */
-            justify-content: center; 
-            flex-wrap: wrap; 
-        }
-        .container {
-            max-width: 100%; 
-            text-align: center; /* Centramos  */
-        }
-        .image-link img {
-            width: 210px; /* Hacemos los GIFs más grandes */
+        .info-section img {
+            width: 200px;
             height: auto;
+            margin-right: 20px;
         }
+        .info-section:first-child img {
+            width: 250px; /* Tamaño más grande para la primera imagen */
+        }
+        .divider {
+            border-bottom: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        body {
+            font-size: 1.75em; /* Tamaño de fuente mediano */
+        }
+
         .navbar-nav .nav-item .dropdown-menu .dropdown-item {
             color: black; /* Color negro para los textos de las prácticas */
         }
         .navbar-nav .nav-item .dropdown-toggle {
             color: white; /* Color blanco para los textos de Unidad 2 y 3 */
         }
+    </style>
     </style>
 </head>
 <body>
@@ -80,23 +92,33 @@
         <p>Ivette Martinez Dorantes</p>
         <p class="lead"></p>
     </div>
-    <div class="container">
-        <div class="row">
-            <a href="https://youtu.be/T8TtE-enslA?si=BKOrdezrHB6oulWw" class="image-link">
-                <img src="./imagenes/uno.gif" alt="GIF 1">
-            </a>
-            <a href="https://youtu.be/taHo7t_jk3A?si=2wL-YnMxWQpJZQe_" class="image-link">
-                <img src="./imagenes/tres.gif" alt="GIF 2">
-            </a>
-            <a href="https://youtu.be/5NjJLFI_oYs?si=ivKAaKMrA4ZmufNR" class="image-link">
-                <img src="./imagenes/cinco.gif" alt="GIF 3">
-            </a>
-            <a href="https://youtu.be/ALbxIboSbMU?si=GsSnWind7A4QVSVl" class="image-link">
-                <img src="./imagenes/dos.gif" alt="GIF 4">
-            </a>
-            <a href="https://youtu.be/Q49pnA4jsp8?si=DpI3VCHa9OqHAd4Q" class="image-link">
-                <img src="./imagenes/cuatro.gif" alt="GIF 5">
-            </a>
+    <header>
+        <img src="./imagenes/H2.jpg" alt="Imagen del header" style="width: 50%; height: auto;">
+    </header>
+    <div class="container text-center" >
+        <h2>Beneficios del durazno en la salud</h2>
+        
+        <div class="info-section">
+            <img src="./imagenes/c.jpg" alt="Durazno Amarillo">
+            <p><strong>Rico en Nutrientes:</strong> Los duraznos son una excelente fuente de vitaminas A y C, <br> para la salud de la piel y el sistema inmunológico.</p>
+        </div>
+        <div class="divider"></div>
+        
+        <div class="info-section">
+            <img src="./imagenes/s.jpg" alt="Durazno Blanco">
+            <p><strong>Ayuda Digestiva:</strong>Son ricos en fibra, lo que ayuda a mejorar<br> la digestión y prevenir el estreñimiento. </p>
+        </div>
+        <div class="divider"></div>
+        
+        <div class="info-section">
+            <img src="./imagenes/Ag.jpg" alt="Durazno Paraguayo">
+            <p><strong>Hidratación:</strong> Los duraznos tienen un alto contenido de agua,<br> lo que contribuye a mantener el cuerpo hidratado.</p>
+        </div>
+        <div class="divider"></div>
+        
+        <div class="info-section">
+            <img src="./imagenes/Ati.webp" alt="Durazno Nectarina">
+            <p><strong>Antioxidantes::</strong> Contienen antioxidantes que combaten los radicales libres<br> y pueden ayudar a reducir el riesgo de enfermedades crónicas.</p>
         </div>
     </div>
 </body>

@@ -11,22 +11,33 @@
     <link rel="stylesheet" href="style.css">
     <title>Ivette Martinez Dorantes</title>
     <style>
-        .image-link {
-            margin: 10px; /* Espacio alrededor de cada imagen */
+        .info-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
         }
-        .row {
-            display: flex; /* imágenes una al lado de la otra */
-            justify-content: center; 
-            flex-wrap: wrap; 
-        }
-        .container {
-            max-width: 100%; 
-            text-align: center; /* Centramos  */
-        }
-        .image-link img {
-            width: 210px; /* Hacemos los GIFs más grandes */
+        .info-section img {
+            width: 200px;
             height: auto;
+            margin-right: 20px;
         }
+        .info-section:first-child img {
+            width: 250px; /* Tamaño más grande para la primera imagen */
+        }
+        .divider {
+            border-bottom: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        body {
+            font-size: 1.75em; /* Tamaño de fuente mediano */
+        }
+
         .navbar-nav .nav-item .dropdown-menu .dropdown-item {
             color: black; /* Color negro para los textos de las prácticas */
         }
@@ -80,23 +91,34 @@
         <p>Ivette Martinez Dorantes</p>
         <p class="lead"></p>
     </div>
-    <div class="container">
-        <div class="row">
-            <a href="https://youtu.be/T8TtE-enslA?si=BKOrdezrHB6oulWw" class="image-link">
-                <img src="./imagenes/uno.gif" alt="GIF 1">
-            </a>
-            <a href="https://youtu.be/taHo7t_jk3A?si=2wL-YnMxWQpJZQe_" class="image-link">
-                <img src="./imagenes/tres.gif" alt="GIF 2">
-            </a>
-            <a href="https://youtu.be/5NjJLFI_oYs?si=ivKAaKMrA4ZmufNR" class="image-link">
-                <img src="./imagenes/cinco.gif" alt="GIF 3">
-            </a>
-            <a href="https://youtu.be/ALbxIboSbMU?si=GsSnWind7A4QVSVl" class="image-link">
-                <img src="./imagenes/dos.gif" alt="GIF 4">
-            </a>
-            <a href="https://youtu.be/Q49pnA4jsp8?si=DpI3VCHa9OqHAd4Q" class="image-link">
-                <img src="./imagenes/cuatro.gif" alt="GIF 5">
-            </a>
+    <header>
+        <img src="./imagenes/H7.jpg" alt="Imagen del header" style="width: 50%; height: auto;">
+    </header>
+    <div class="container text-center" >
+        <h2>El impacto productor de durazno en el mundo</h2>
+        
+        <div class="info-section">
+            <img src="./imagenes/1.jpg" alt="Durazno Amarillo">
+            <p><strong>Producción Global:</strong> En 2020, la producción mundial de duraznos fue de aproximadamente <br>24.6 millones de toneladas con una producción que supera los 13 millones de toneladas anuales.</p>
+        </div>
+        <div class="divider"></div>
+        
+        <div class="info-section">
+            <img src="./imagenes/2.jpg" alt="Durazno Blanco">
+            <p><strong>Principales Productores:</strong>China es el mayor productor, seguido por <br>España e Italia, que juntos representan más del 70% de la producción mundial</p>
+        </div>
+        <div class="divider"></div>
+        
+        <div class="info-section">
+            <img src="./imagenes/3.jpg" alt="Durazno Paraguayo">
+            <p><strong>Superficie Cosechada:</strong>La superficie cosechada a nivel mundial es de alrededor de 1.5 millones de hectáreas, con un rendimiento promedio de 16.5 toneladas por hectárea</p>
+        </div>
+        <div class="divider"></div>
+
+        
+        <div class="info-section">
+            <img src="./imagenes/4.jpg" alt="Durazno Nectarina">
+            <p><strong>Mercado Internacional:</strong>Los duraznos se exportan a más de 160 países, siendo Alemania,<br> Estados Unidos, Francia, Inglaterra y Canadá los principales importadores</p>
         </div>
     </div>
 </body>
