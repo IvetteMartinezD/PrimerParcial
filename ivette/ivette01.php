@@ -40,17 +40,17 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white"> Unidad 1</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="/ivette/ivette01.php" style="color: black">Tipos de Duraznos</a><br>
-                            <a class="dropdown-item" href="./P2.html" style="color: black">Beneficios del durazno en la salud</a><br>
-                            <a class="dropdown-item" href="./P3.html" style="color: black">Cultivo de Duraznos</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette02.php" style="color: black">Datos</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette03.php" style="color: black">Usuarios</a><br>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">Unidad 2</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/ivette/P4.php" style="color: black">Curiosidades sobre los Duraznos</a><br>
-                            <a class="dropdown-item" href="./P5.html" style="color: black">Duraznos en la cultura Pop</a><br>
-                            <a class="dropdown-item" href="./P6.html" style="color: black">Los mayores productores<br> de
+                            <a class="dropdown-item" href="/ivette/ivette04.php" style="color: black">Curiosidades sobre los Duraznos</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette05.php" style="color: black">Duraznos en la cultura Pop</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette06.php" style="color: black">Los mayores productores<br> de
                                 los duraznos en el mundo</a><br>
                         </div>
                     </li>
@@ -58,69 +58,95 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">Unidad 3</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="./P7.html" style="color: black">El impacto productor de durazno en el mundo</a><br>
-                            <a class="dropdown-item" href="./P8.html" style="color: black">Duraznos en el arte y la literatura</a><br>
-                            <a class="dropdown-item" href="./P9.html" style="color: black">Mi amor por los Duraznos</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette07.php" style="color: black">El impacto productor de durazno en el mundo</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette08.php" style="color: black">Duraznos en el arte y la literatura</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette09.php" style="color: black">Mi amor por los Duraznos</a><br>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="jumbotron text-center">
-        <h1 class="display-4" style="font-family: 'Cakerolli Trial', sans-serif;">¡PEACH LOVE!</h1>
-        <
-    </div>
+    <div class="jumbotron text-center" style="background-color: white;">
+        <h1 class="display-4" style="font-family: 'Cakerolli Trial', sans-serif;">Datos</h1>
+        <?php
+        $username = "root";
+        $password = "";
+        $servername = "localhost";
+        $database = "tduraznos";
+        
+        $conexion = new mysqli ($servername, $username, $password, $database);
+        if ($conexion->connect_error){
+            die("Conexion Fallida:" . $conexion->connect_error);
+         }
+         $sql = "SELECT * FROM tiposdeduraznos";
+         $resultado = $conexion->query($sql);
+        ?>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem; "  ><!-- max-width para que las tarjetas tenga un mismo tamaño-->
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="container">
+            <h1>DATOS SOBRE DURAZNOS</h1>
+            <style>
+                h1{
+                    text-align: center;
+                    color:#ff33dd;
+                    margin-bottom:20px;
+                }
 
+                table{
+                    width:100%;
+                    border-collapse:collapse;
+                    margin-top: 50px;
+                    border-radius:50px;  
+                }
+                th,td{
+                    padding:10px;
+                    text-align:left;
+                    border-bottom:1px solid #ddd;
+                }
+                tr:nth-child(even){
+                    background-color:pink;
+                    color: black;
+                }
+                tr:nth-child(odd){
+                background-color:white;
+                color:white;
+                }
+                td{
+                    background: color #ff3eff;
+                    color:white;
+                }
+            </style>
+            <?php if ($resultado->num_rows >0):?> 
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>Origen</th>
+                        <th>Caracteristicas</th>
+                        <th>Sabor</th>
+                        <th>Color</th>
+                        <th>Peso</th>
+
+                    </tr>
+                    <?php while($fila = $resultado->fetch_assoc()): ?>
+                        <tr>
+                            <td><?php echo $fila['id']; ?></td>
+                            <td><?php echo $fila['Nombre'] ;?></td>
+                            <td><?php echo $fila['Origen'];?></td>
+                            <td><?php echo $fila['Caracteristicas'];?></td>
+                            <td><?php echo $fila['Sabor'];?></td>
+                            <td><?php echo $fila['Color'];?></td>
+                            <td><?php echo $fila['Peso'];?></td>
+                        </tr>
+                        <?php endwhile; ?>
+                        
+                </table>
+            <?php else: ?>
+                <p>No se encontro los nombres</p>
+                <?php endif;?>
             
-            <div class="col-sm-2">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem; ">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Info card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card text-white bg-warning mb-3" style="max-width: 18rem; ">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Warning card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem; ">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Danger card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card text-white bg-primary mb-3" style="max-width: 18rem; ">
-                    <div class="card-header" >Header</div>
-                    <div class="card-body" >
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
+        </div>
+    </div>
             <!-- Termina-->
         </div>
     </div>

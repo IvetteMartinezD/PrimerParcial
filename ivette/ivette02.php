@@ -40,17 +40,17 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white"> Unidad 1</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="/ivette/ivette01.php" style="color: black">Tipos de Duraznoz</a><br>
-                            <a class="dropdown-item" href="/ivette/ivette02.php" style="color: black">Beneficios del durazno en la saludd</a><br>
-                            <a class="dropdown-item" href="./P3.html" style="color: black">Cultivo de Duraznos</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette02.php" style="color: black">Datos</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette03.php" style="color: black">Usuarios</a><br>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">Unidad 2</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/ivette/P4.php" style="color: black">Curiosidades sobre los Duraznos</a><br>
-                            <a class="dropdown-item" href="./P5.html" style="color: black">Duraznos en la cultura Pop</a><br>
-                            <a class="dropdown-item" href="./P6.html" style="color: black">Los mayores productores<br> de
+                            <a class="dropdown-item" href="/ivette/ivette04.php" style="color: black">Curiosidades sobre los Duraznos</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette05.php" style="color: black">Duraznos en la cultura Pop</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette06.php" style="color: black">Los mayores productores<br> de
                                 los duraznos en el mundo</a><br>
                         </div>
                     </li>
@@ -58,9 +58,9 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">Unidad 3</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="./P7.html" style="color: black">El impacto productor de durazno en el mundo</a><br>
-                            <a class="dropdown-item" href="./P8.html" style="color: black">Duraznos en el arte y la literatura</a><br>
-                            <a class="dropdown-item" href="./P9.html" style="color: black">Mi amor por los Duraznos</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette07.php" style="color: black">El impacto productor de durazno en el mundo</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette08.php" style="color: black">Duraznos en el arte y la literatura</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette09.php" style="color: black">Mi amor por los Duraznos</a><br>
                         </div>
                     </li>
                 </ul>
