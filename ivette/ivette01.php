@@ -29,8 +29,8 @@
     </style>
 </head>
 <body>
-    <link href="https://fonts.cdnfonts.com/css/cakerolli-trial" rel="stylesheet">
-    <nav class="navbar navbar-light" style="background-color: #FAC498;">
+<link href="https://fonts.cdnfonts.com/css/kasitau" rel="stylesheet">
+    <nav class="navbar navbar-light" style="background-color: #f8d5c2;">
         <div class="container">
             <a class="navbar-brand" href="./index.html" style="color:white">Inicio</a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -68,7 +68,7 @@
         </div>
     </nav>
     <div class="jumbotron text-center" style="background-color: white;">
-        <h1 class="display-4" style="font-family: 'Cakerolli Trial', sans-serif;">Datos</h1>
+    <h1 class="display-4" style="font-family: 'Kasitau', sans-serif; " >¡PEACH LOVE!</h1>
         <?php
         $username = "root";
         $password = "";
@@ -84,11 +84,11 @@
         ?>
 
         <div class="container">
-            <h1>DATOS SOBRE DURAZNOS</h1>
+            <h3>Aprende más sobre los diferentes tipos de duraznos que existen en el mundo.</h3>
             <style>
-                h1{
+                h3{
                     text-align: center;
-                    color:#ff33dd;
+                    color:black;
                     margin-bottom:20px;
                 }
 
@@ -97,23 +97,28 @@
                     border-collapse:collapse;
                     margin-top: 50px;
                     border-radius:50px;  
+                    border: 1px solid #f8e3ca;
                 }
+
                 th,td{
                     padding:10px;
                     text-align:left;
-                    border-bottom:1px solid #ddd;
+                    border-bottom:1px solid #f8e3ca;
                 }
+
                 tr:nth-child(even){
-                    background-color:pink;
+                    background-color:white;
                     color: black;
                 }
+
                 tr:nth-child(odd){
-                background-color:white;
-                color:white;
+                background-color:#fad1b4;
+                color:black;
                 }
+
                 td{
-                    background: color #ff3eff;
-                    color:white;
+                    background: inherit;
+                    color:black;
                 }
             </style>
             <?php if ($resultado->num_rows >0):?> 
@@ -123,9 +128,9 @@
                         <th>Nombre</th>
                         <th>Origen</th>
                         <th>Caracteristicas</th>
-                        <th>Sabor</th>
+                        <th>Sabor(1-10)</th>
                         <th>Color</th>
-                        <th>Peso</th>
+                        <th>Peso(g)</th>
 
                     </tr>
                     <?php while($fila = $resultado->fetch_assoc()): ?>
@@ -134,9 +139,9 @@
                             <td><?php echo $fila['Nombre'] ;?></td>
                             <td><?php echo $fila['Origen'];?></td>
                             <td><?php echo $fila['Caracteristicas'];?></td>
-                            <td><?php echo $fila['Sabor'];?></td>
+                            <td><?php echo $fila['Sabor(1-10)'];?></td>
                             <td><?php echo $fila['Color'];?></td>
-                            <td><?php echo $fila['Peso'];?></td>
+                            <td><?php echo $fila['Peso(g)'];?></td>
                         </tr>
                         <?php endwhile; ?>
                         
