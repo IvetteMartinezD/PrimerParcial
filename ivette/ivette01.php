@@ -139,9 +139,9 @@
                             <td><?php echo $fila['Nombre'] ;?></td>
                             <td><?php echo $fila['Origen'];?></td>
                             <td><?php echo $fila['Caracteristicas'];?></td>
-                            <td><?php echo $fila['Sabor(1-10)'];?></td>
+                            <td><?php echo $fila['Sabor'];?></td>
                             <td><?php echo $fila['Color'];?></td>
-                            <td><?php echo $fila['Peso(g)'];?></td>
+                            <td><?php echo $fila['Peso'];?></td>
                         </tr>
                         <?php endwhile; ?>
                         
