@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Ivette Martinez Dorantes</title>
     <style>
-        
         .row {
             display: flex; /* Poner las cards en una fila */
             justify-content: center;  /* Centramos las cards */
@@ -20,17 +19,15 @@
         .container {
             max-width: 100%; 
             text-align: center; /* Centramos  */
-            
         }
         body {
             font-size: 1.75em; /* Tamaño de fuente */
         }
-        
     </style>
 </head>
 <body>
-    <link href="https://fonts.cdnfonts.com/css/cakerolli-trial" rel="stylesheet">
-    <nav class="navbar navbar-light" style="background-color: #FAC498;">
+<link href="https://fonts.cdnfonts.com/css/kasitau" rel="stylesheet">
+    <nav class="navbar navbar-light" style="background-color: #f8d5c2;">
         <div class="container">
             <a class="navbar-brand" href="./index.html" style="color:white">Inicio</a>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -39,7 +36,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white"> Unidad 1</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/ivette/ivette01.php" style="color: black">Tipos de Duraznoz</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette01.php" style="color: black">Tipos de Duraznos</a><br>
                             <a class="dropdown-item" href="/ivette/ivette02.php" style="color: black">Datos</a><br>
                             <a class="dropdown-item" href="/ivette/ivette03.php" style="color: black">Usuarios</a><br>
                         </div>
@@ -67,65 +64,52 @@
             </div>
         </div>
     </nav>
-    <div class="jumbotron text-center">
-        <h1 class="display-4" style="font-family: 'Cakerolli Trial', sans-serif;">¡PEACH LOVE!</h1>
-        <p class="lead" >Peach Love: Beautiful, sweet, and full of charm</p>
-        <hr class="my-4">
-        <p>Ivette Martinez Dorantes</p>
-        <p class="lead"></p>
-    </div>
-
     <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem; "  ><!-- max-width para que las tarjetas tenga un mismo tamaño-->
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
+    <h1 class="display-4" style="font-family: 'Kasitau', sans-serif; " >Meter Datos</h1>
+       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="formulario">
+    <label for="Nombre">Nombre:</label>
+    <input type="text" id="Nombre" name="Nombre" required><br>
+    <label for="Origen">Origen:</label>
+    <input type="text" id="Origen" name="Origen" required><br>
+    <label for="Caracteristicas">Caracteristicas:</label>
+    <input type="text" id="Caracteristicas" name="Caracteristicas" required><br>
+    <label for="Sabor">Sabor:</label>
+    <input type="text" id="Sabor" name="Sabor" required><br>
+    <label for="Color">Color:</label>
+    <input type="text" id="Color" name="Color" required><br>
+    <label for="Peso">Peso:</label>
+    <input type="text" id="Peso" name="Peso" required><br>
+    <input type="submit" value="Agregar registro">
+    </form>
+       <?php
+        $username = "root";
+        $password = "";
+        $servername = "localhost";
+        $database = "tduraznos";
 
-            
-            <div class="col-sm-2">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem; ">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Info card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card text-white bg-warning mb-3" style="max-width: 18rem; ">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Warning card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem; ">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Danger card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card text-white bg-primary mb-3" style="max-width: 18rem; ">
-                    <div class="card-header" >Header</div>
-                    <div class="card-body" >
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Termina-->
-        </div>
+        $conexion = new mysqli($servername, $username, $password, $database);
+        if ($conexion->connect_error) {
+            die("Conexion Fallida:" . $conexion->connect_error);
+        }
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Se obtiene los datos del formulario
+            $Nombre = $_POST["Nombre"];
+            $Origen = $_POST["Origen"];
+            $Caracteristicas = $_POST["Caracteristicas"];
+            $Sabor = $_POST["Sabor"];
+            $Color = $_POST["Color"];
+            $Peso = $_POST["Peso"];
+
+            $sql = "INSERT INTO tiposdeduraznos (Nombre, Origen, Caracteristicas, Sabor, Color, Peso) VALUES ('$Nombre', '$Origen', '$Caracteristicas', '$Sabor', '$Color', '$Peso')";
+            if ($conexion->query[$sql] == TRUE) {
+                echo "<p class='success'>Nuevo dato agregado con exito.</p>";
+            } else {
+                echo "<p class='error'>Error al agregar el nuevo dato: " . $conexion->error . "</p>";
+            }
+        }
+        ?>
     </div>
 </body>
 </html>
+

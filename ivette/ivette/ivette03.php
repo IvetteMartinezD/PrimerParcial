@@ -67,9 +67,24 @@
             </div>
         </div>
     </nav>
-    <div class="jumbotron text-center" style="background-color: white;">
-    <h1 class="display-4" style="font-family: 'Kasitau', sans-serif; " >¡PEACH LOVE!</h1>
-        <?php
+    <div class="container">
+    <h1 class="display-4" style="font-family: 'Kasitau', sans-serif; " >Meter Datos</h1>
+       <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="formulario">
+    <label for="Nombre">Nombre:</label>
+    <input type="text" id="Nombre" name="Nombre" requiered><br>
+    <label for="Origen">Origen:</label>
+    <input type="text" id="Origen" name="Origen" requiered><br>
+    <label for="Caracteristicas">Caracteristicas:</label>
+    <input type="text" id="Caracteristicas" name="Caracteristicas" requiered><br>
+    <label for="Sabor">Sabor:</label>
+    <input type="text" id="Sabor" name="Sabor" requiered><br>
+    <label for="Color">Color:</label>
+    <input type="text" id="Color" name="Color" requiered><br>
+    <label for="Color">Peso:</label>
+    <input type="text" id="Peso" name="Peso" requiered><br>
+ <input type="submit" value="Agregar registro">
+    </form>
+       <?php
         $username = "root";
         $password = "";
         $servername = "localhost";
@@ -79,24 +94,28 @@
         if ($conexion->connect_error){
             die("Conexion Fallida:" . $conexion->connect_error);
          }
-         $sql = "SELECT * FROM tiposdeduraznos";
-         $resultado = $conexion->query($sql);
-         if($resultado->num_rows>0){
-            echo"<table>";
-            echo"<tr><th>id</th><th>Nombre</th><th>Origen</th><th>Caracteristicas</th><th>Sabor(1-10)</th><th>Color</th><th>Peso(g)</th></tr>";
-            while($row = $resultado->fetch_assoc()){
-                echo "<tr><td>" . $row["id"] . "</td><td>" . $row["Origen"] . "</td><td>" . $row["Caracteristicas"] . "</td><td>" . $row["Sabor(1-10)"] 
-                . "</td><td>" . $row["Color"]  . "</td><td>" . $row["Peso(g)"] . "</td></tr>";
+            
+             if($SERVER["REQUEST_METHOD"]=="POST"){
+                //se obtiene los datos del formulario
+                $Nombre = $_POST["Nombre"];
+                $Origen = $_POST["Origen"];
+                $Caracteristicas = $_POST["Caracteristicas"];
+                $Sabor = $_POST["Sabor"];
+                $Color = $_POST["Color"];
+                $Peso = $_POST["Peso"];
+
+                $sql = "INSERT INTO tiposdeduraznos (Nombre,Origen,Caracteristicas,Sabor,Color,Peso) VALUES ($Nombre , $Origen, $Caracteristicas , $Sabor , $Color , $Peso)";
+                if($conecion->query [$sql]==TRUE){
+                    echo "<p class='sucess'>Nuevo dato agregado con exito</p>";
+                }else{
+                    echo "<p class='error'"</p>
+                }
+            
             }
-            echo "</table>";
-         }else{
-            echo "No se encontraton registros en la base de datos";
-         }
-         $conexion->close();
         ?>
 
         
-<h1 class="display-4" style="font-family: 'Kasitau', sans-serif; " >Hola</h1>
+
             <!-- Termina-->
 
         </div>

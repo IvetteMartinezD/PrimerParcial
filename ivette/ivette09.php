@@ -1,131 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Ivette Martinez Dorantes</title>
-    <style>
-        
-        .row {
-            display: flex; /* Poner las cards en una fila */
-            justify-content: center;  /* Centramos las cards */
-            flex-wrap: wrap; /* Si no caben las cards se pongan en la siguiente fila*/
-        }
-        .container {
-            max-width: 100%; 
-            text-align: center; /* Centramos  */
-            
-        }
-        body {
-            font-size: 1.75em; /* Tamaño de fuente */
-        }
-        
-    </style>
-</head>
-<body>
-    <link href="https://fonts.cdnfonts.com/css/cakerolli-trial" rel="stylesheet">
-    <nav class="navbar navbar-light" style="background-color: #FAC498;">
-        <div class="container">
-            <a class="navbar-brand" href="./index.html" style="color:white">Inicio</a>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white"> Unidad 1</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/ivette/ivette01.php" style="color: black">Tipos de Duraznoz</a><br>
-                            <a class="dropdown-item" href="/ivette/ivette02.php" style="color: black">Datos</a><br>
-                            <a class="dropdown-item" href="/ivette/ivette03.php" style="color: black">Usuarios</a><br>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">Unidad 2</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/ivette/ivette04.php" style="color: black">Curiosidades sobre los Duraznos</a><br>
-                            <a class="dropdown-item" href="/ivette/ivette05.php" style="color: black">Duraznos en la cultura Pop</a><br>
-                            <a class="dropdown-item" href="/ivette/ivette06.php" style="color: black">Los mayores productores<br> de
-                                los duraznos en el mundo</a><br>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">Unidad 3</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/ivette/ivette07.php" style="color: black">El impacto productor de durazno en el mundo</a><br>
-                            <a class="dropdown-item" href="/ivette/ivette08.php" style="color: black">Duraznos en el arte y la literatura</a><br>
-                            <a class="dropdown-item" href="/ivette/ivette09.php" style="color: black">Mi amor por los Duraznos</a><br>
-                        </div>
-                    </li>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="style.css">
+    
+            <title>Keila Zeret Hernández León</title>
+        </head>
+        <body>
+        <link href="https://fonts.cdnfonts.com/css/apes-on-parade" rel="stylesheet"> 
+        <link href="https://fonts.cdnfonts.com/css/ningst-sparkle" rel="stylesheet">
+            <nav class="navbar navbar-ligth" style="background-color: #84c047;">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" style="color:#ecf39e;">Inicio</a>
+                <!--boton de inicio que lleva a si mismo, de color blanco-->
+                <!--a continuación es el menú drowdownd para poner las ligas a las prácticas -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./index.html" id="navbarNavDropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ecf39e;">Producción 1980s</a>
+                            <!--Lo que sigue son los menos que se va a desplegar hacia abajo, cada uno tendra el nombre de su práctica, ejemplo, práctica 1 se llamara su nombre+el numero de la practica xx terminando con HTML-->
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="/keilaleon/keila01.php" style="color: #000;">El castillo en el cielo</a><br>
+                                <a class="dropdown-item" href="/keilaleon/keila02.php" style="color: #000;">Mi vecino Totoro</a><br>
+                                <a class="dropdown-item" href="/keilaleon/keila03.php" style="color: #000;">La tumba de las luciérnagas</a><br>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ecf39e;">Producción 1990s</a>
+                            <!--Lo que sigue son los menos que se va a desplegar hacia abajo, cada uno tendra el nombre de su práctica, ejemplo, práctica 1 se llamara su nombre+el numero de la practica xx terminando con HTML-->
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="./Kei04.html" style="color: #000;">Susurro del corazón</a><br>
+                                <a class="dropdown-item" href="./Kei05.html" style="color: #000;">La princesa Mononoke</a><br>
+                                <a class="dropdown-item" href="./Kei06.html" style="color: #000;">Olas del océano</a><br>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ecf39e;">Producción 2000s</a>
+                            <!--Lo que sigue son los menos que se va a desplegar hacia abajo, cada uno tendra el nombre de su práctica, ejemplo, práctica 1 se llamara su nombre+el numero de la practica xx terminando con HTML-->
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="./Kei07.html" style="color: #000;">El viaje de Chihiro</a><br>
+                                <a class="dropdown-item" href="./Kei08.html" style="color: #000;">El castillo ambulante</a><br>
+                                <a class="dropdown-item" href="./Kei09.html" style="color: #000;">Ponyo</a><br>
+                                <a class="dropdown-item" href="./Kei10.html" style="color: #000;">Final</a>
+                            </div>
+                        </li>
                 </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <div class="jumbotron text-center">
-        <h1 class="display-4" style="font-family: 'Cakerolli Trial', sans-serif;">¡PEACH LOVE!</h1>
-        <p class="lead" >Peach Love: Beautiful, sweet, and full of charm</p>
-        <hr class="my-4">
-        <p>Ivette Martinez Dorantes</p>
-        <p class="lead"></p>
-    </div>
+            </nav>
+            <div class="container1 text-center" >
+                <h1 class="display-4" style="font-family:'Apes On Parade', sans-serif; color: #0d8eb2;">Meter Datos</h1>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="formulario">
+                   <label for="Pelicula">Pelicula</label>
+                   <input type="text" id="Pelicula" name="Pelicula" requiered><br>
+                   <label for="Año">Año</label>
+                   <input type="text" id="Año" name="Año" requiered><br>
+                   <label for="Subgenero">Subgenero</label>
+                   <input type="text" id="Subgenero" name="Subgenero" requiered><br>
+                   <label for="Calificacion">Calificacion</label>
+                   <input type="text" id="Calificacion" name="Calificacion" requiered><br>
+                   <label for="Clasificacion">Clasificacion</label>
+                   <input type="text" id="Clasificacion" name="Clasificacion" requiered><br>
+                    
+                   <input type="submit" value="Agregar registro">
+                </form>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-                <div class="card text-white bg-success mb-3" style="max-width: 18rem; "  ><!-- max-width para que las tarjetas tenga un mismo tamaño-->
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Success card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
+                <?php
+                $username = "root";
+                $password = "";
+                $servername = "localhost";
+                $database = "ghibli";
 
-            
-            <div class="col-sm-2">
-                <div class="card text-white bg-info mb-3" style="max-width: 18rem; ">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Info card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
+                $conexion = new mysqli( $servername,$username, $password, $database);
+                if ($conexion->connect_error) {
+                    die("Conexion Fallida: " . $conexion->connect_error);
+                }
+                if($_SERVER["REQUEST_METHOD"]=="POST"){
+                    //Se obtienen los datos del formulario
+                    $Nombre = $_POST["Pelicula"]; //tal caul aparece en subase de datos lo que va en comillas
+                    $Nombre = $_POST["Año"];
+                    $Nombre = $_POST["Subgenero"];
+                    $Nombre = $_POST["Calificacion"];
+                    $Nombre = $_POST["Clasificacion"];
+                    
+                    $sql = "INSERT INTO Personajes (Pelicula, Año, Subgenero, Calificacion, Clasificacion) VALUES ($Pelicula, $Año, $Subgenero, $Calificacion, $Clasificacion)";
+                    if($conexion->query[$sql]==TRUE){
+                        echo "<p class='success'>Nuevo pelicula agregada con exito. </p>";
+                    }else{
+                        echo "<p class='error'>Error al agregar la pelicula: " . $conexion->error . "</p>";
+                    }
+                }
+                ?>
+
+                    
+                    
             </div>
-            <div class="col-sm-2">
-                <div class="card text-white bg-warning mb-3" style="max-width: 18rem; ">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Warning card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card text-white bg-danger mb-3" style="max-width: 18rem; ">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Danger card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card text-white bg-primary mb-3" style="max-width: 18rem; ">
-                    <div class="card-header" >Header</div>
-                    <div class="card-body" >
-                        <h5 class="card-title">Primary card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Termina-->
-        </div>
-    </div>
-</body>
-</html>
+        </body>
+    </html>
