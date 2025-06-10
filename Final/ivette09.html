@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Final</title>
+</head>
+<body>
+  <style>
+      
+      *{
+        box-sizing: border-box;
+      }
+      :root{
+        --color-primario:#fffdf5;
+         --color-secundario:#e3d5ca;
+         --color-terceario:#67a19d;
+          --color-cuarto:#88c5b2;
+           --color-quinto:#7cb598;
+
+      }
+      body{
+      background-color: var(--color-primario);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      }
+      header{
+        padding: 16px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: var(--color-cuarto);
+        align-items: center;
+        
+      }
+      .search{
+        background-color: white;
+        border:5px solid var(--color-terceario);
+        border-radius: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        padding: 8px 15px;
+        color: var(--color-primario);
+      }
+      .search::placeholder{
+        color: var(--color-quinto);
+
+      }
+     .search:focus{
+      outline: none;
+      background-color: var(--color-cuarto);
+     }
+     main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+     }
+     .personaje{
+      width: 400px;
+      margin: 15px;
+      background-color: var(--color-quinto);
+      box-shadow: 10px 15px 1px var(--color-secundario);
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+     }
+     .personaje img{
+      width: 80%;
+      height: 400px;
+     object-fit: contain;    
+     }
+     .personaje-info{
+      color: var(--color-primario);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 0.8px 15px 15px;
+      letter-spacing: 5px;
+
+     }
+     .personaje-info h3{
+      color: var(--color-primario);
+      margin-top: 0;
+     }
+     .personaje-info h1{
+      color: var(--color-terceario);
+      margin-top: 0;
+     }
+   
+   
+    .overview{
+      background-color: #ffffff;
+      padding: 15px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      max-height: 100%;
+      transform: translateY(101%);
+      overflow-y: auto;
+      transition: transform 1s ease-in;
+      
+    }
+    .personaje:hover .overview{
+      transform: translateY(0);
+    }
+.logo {
+   width:100px;
+    height: auto; 
+    object-fit: contain;
+    transform: scale(1.5);
+    
+}
+
+    .navbar-nav .nav-link {
+    flex-direction: row; 
+    justify-content: flex-start; 
+    margin-left: 0 ;
+    padding-left: 0;
+    gap: 15px;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+.navbar-brand {
+    margin-right: 30px; 
+}
+    </style>
+
+  <header>
+     <nav class="navbar navbar-expand-lg navbar-light" >
+        <div class="container">
+            <a class="navbar-brand" href="./index.html" style="color:white; margin-right: 30px; ">Inicio</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav navbar-nav ">
+                    <li class="nav-item dropdown">
+                         <!--cambiamos data-toggle por data-bs-toggle -->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white"> Unidad 1</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                           <a class="dropdown-item" href="/ivette/ivette01.php" style="color: black">Tabla 1</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette02.php" style="color: black">Tabla 2</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette03.php" style="color: black">Tabla 3</a><br>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">Unidad 2</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/ivette/ivette04.php" style="color: black">Escuela 1</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette05.php" style="color: black">Escuela 2</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette05m.php" style="color: black">Escuela3</a><br>
+                            <a class="dropdown-item" href="/ivette/dorantes.php" style="color: black">Productos</a><br>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarNavDropdownMenuLink" 
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white">Unidad 3</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/ivette/trebol.php" style="color: black">Proyecto primavera</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette06.html" style="color: black">Pokedex</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette07.html" style="color: black">Peliculas API</a><br>
+                            <a class="dropdown-item" href="/ivette/ivette08.html" style="color: black">Dragon Ball Z</a><br>
+                             <a class="dropdown-item" href="/ivette/ivette09.html" style="color: black">RICK Y HP</a><br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <form id="form">
+    <img src="oso.png" alt="logo" class="logo" style="width: 80px; height: 70px;">
+    <input type="text" id="search" class="search" placeholder="Busca tu pelicula">
+</form>
+  </header>
+  <main id="main"></main>
+    <script>
+      const API_HP = 'https://hp-api.onrender.com/api/characters'; 
+       const API_RICK = 'https://rickandmortyapi.com/api/character';
+       
+       const main = document.getElementById('main');
+       const form = document.getElementById('form');
+       const search = document.getElementById('search');
+
+       getAllCharacters();//Se llama a la función que obtiene todos los personajes de ambas APIs cuando la página carga por primera vez
+       //Se llama a la función que obtiene todos los personajes de ambas APIs cuando la página carga por primera vez
+       async function getAllCharacters(){
+        const [resRM, resHP] = await Promise.all([
+        fetch(API_RICK).then(res => res.json()), 
+        fetch(API_HP).then(res => res.json())
+    ]);
+
+            //La función es async, porque va a usar await.
+            //Se muestra un mensaje mientras cargan los personajes.
+            //Se hacen ambas peticiones en paralelo con Promise.all.
+            //Se convierten las respuestas en formato JSON.
+            //await hace que JavaScript espere el resultado de Promise.all(..)antes de continuar con el resto del código, 
+            // Es decir, detiene la ejecución hasta que ambas respuestas esten listas.
+
+              const rm = resRM.results || [];//personajes de rick
+              const hp = resHP || [];//personajes de HP
+            //se guardan los arrays de los personajes 
+            //Rick and Morty usa results, Harry Potter devuelve un array directamente.
+
+        showCharacters([...rm, ...hp]);
+       }
+       //se llama a showcharacters para mostrar todos los personajes juntos.
+      function showCharacters(characters){
+        main.innerHTML = '';
+
+        characters.forEach((char) => {//es el que comparten
+       let name = char.name || 'Desconocida';
+       let image = char.image || '';
+       let species = char.species || 'Desconocida';
+       let gender = char.gender || 'Desconocida';
+    
+
+       const charElement = document.createElement('div');
+       charElement.classList.add ('personaje');
+      // Si el personaje tiene "status", es de Rick and Morty,pq este si pertenece en el API
+      if (char.status) {
+      let id = char.id;//campos de rick
+      let status = char.status;
+
+      charElement.innerHTML = `
+        <img src="${image}" alt="${name}">
+        <div class="personaje-info">
+            <h1>${id}</h1>
+            <h3>${name}</h3>
+            <br>
+        </div>
+        <div class="overview">
+            <h3>Descripción</h3>
+            <p><strong>Especie:</strong> ${species}</p>
+            <p><strong>Género:</strong> ${gender}</p>
+            <p><strong>Estado:</strong> ${status}</p>
+        </div>
+      `;
+    } else { // Si no tiene "status", es de HP,ahí es cuando se ejecuta else pq seria un personaje de HP
+      const { house, patronus, yearOfBirth, ancestry } = char;
+      
+
+      charElement.innerHTML = `
+        <img src="${image}" alt="${name}">
+        <div class="personaje-info">
+            <h3>${name}</h3>
+
+        </div>
+        <div class="overview">
+            <h3>Descripción</h3>
+            <p><strong>Especie:</strong> ${species}</p>
+            <p><strong>Patronus:</strong> ${patronus || 'No posee'}</p>
+            <p><strong>Género:</strong> ${gender}</p>
+            <p><strong>Año de nacimiento:</strong> ${yearOfBirth || 'Desconocido'}</p>
+            <p><strong>Linaje:</strong> ${ancestry || 'Desconocido'}</p>
+             <p><strong>Casa:</strong> ${house || 'Desconocido'}</p>
+
+        </div>
+      `;
+    }
+
+    main.appendChild(charElement);
+  });
+}
+  form.addEventListener('submit', (e) =>{ //no funciona buscador
+          e.preventDefault()
+          const searchTerm = search.value.toLowerCase();
+          if(searchTerm && searchTerm !== ''){
+            getCharacters(API_RICK + `/?name=${searchTerm}`);
+            search.value='';
+          }else{window.location.reload();}
+        });
+       
+    </script>
+</body>
+</html>
